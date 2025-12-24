@@ -1,0 +1,67 @@
+
+""""""""""App.jsx""""
+
+
+import { useState } from "react";
+import "./App.css";
+
+function App() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="container">
+      <div className="card">
+        <h3>Example for Counter Application</h3>
+        <h2>Count: {count}</h2>
+        <button onClick={() => setCount(count + 1)}>Increase</button>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+
+
+"""""" App.css"""
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+}
+
+.card {
+  background: white;
+  padding: 40px 60px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  margin-bottom: 15px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
